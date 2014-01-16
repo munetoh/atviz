@@ -1,0 +1,82 @@
+{
+  "title": "Figure 5: Attack Nodes, of Bruce Schnier, Attack Tree, Dr. Dobb's Journal, Dec. 1999",
+  "url": "https://www.schneier.com/paper-attacktrees-ddj-ft.html",
+  "default_shape": "box",
+  "operations": {
+     "trace cost": true
+  },
+  "cost": {
+    "currency": "$",
+    "unit": "K",
+    "threshold": 100
+  },
+
+  "flat_tree": {
+    "A0": {
+      "description": "Open Safe"
+    },
+
+    "A1": {
+      "child_of": "A0",
+      "description": "Pick Lock",
+      "cost": 30
+    },
+    "A2": {
+      "child_of": "A0",
+      "description": "Learn Combo"
+    },
+    "A3": {
+      "child_of": "A0",
+      "description": "Cut Open Safe",
+      "cost": 10
+    },
+    "A4": {
+      "child_of": "A0",
+      "description": "Install Improperly",
+      "cost": 100
+    },
+
+    "A2-1": {
+      "child_of": "A2",
+      "description": "Find Written Combo",
+      "cost": 75
+    },
+    "A2-2": {
+      "child_of": "A2",
+      "description": "Get Combo From Target"
+    },
+
+    "A2-2-1": {
+      "child_of": "A2-2",
+      "description": "Threten",
+      "cost": 60
+    },
+    "A2-2-2": {
+      "child_of": "A2-2",
+      "description": "Blackmail",
+      "cost": 100
+    },
+    "A2-2-3": {
+      "child_of": "A2-2",
+      "description": "Eavesdrop"
+    },
+    "A2-2-4": {
+      "child_of": "A2-2",
+      "description": "Bibe",
+      "cost": 20
+    },
+
+    "A2-2-3-1": {
+      "child_of": "A2-2-3",
+      "condition": "and",
+      "description": "Listen to Conversation",
+      "cost": 20
+    },
+    "A2-2-3-2": {
+      "child_of": "A2-2-3",
+      "condition": "and",
+      "description": "Get Target to State Combo",
+      "cost": 40
+    }
+  }
+}

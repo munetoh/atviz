@@ -1,0 +1,86 @@
+{
+  "tree": {
+    "T0001": {
+      "type"       : "threat",
+      "description": "Information Disclosure",
+      "level": "top",
+      "or": {
+        "A0001": {
+          "type": "attack",
+          "description": "remote attack",
+          "and": {
+            "C0001" : {
+              "type": "countermeasure",
+              "description": "Fire-wall"
+            },
+            "C0002" : {
+              "type": "countermeasure",
+              "description": "Authentication",
+              "and": {
+                "A0000": {
+                  "type": "attack",
+                  "description": "brute-force attack, dictionaly attack",
+                  "and": {
+                    "C0001":{
+                      "type": "countermeasure",
+                      "category": "security function",
+                      "description": "PW checker",
+                      "child": {
+                        "W0000": {
+                          "type": "weakness",
+                          "description": "implementation bug",
+                          "sink": {
+                            "C0000" : {
+                              "type": "countermeasure",
+                              "description": "test"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "C0002": {
+                      "type": "countermeasure",
+                      "description": "operational",
+                      "and": {
+                        "W0000": {
+                          "type": "weakness",
+                          "description": "uneducated user",
+                          "sink" : {
+                            "C0001": {
+                              "type": "countermeasure",
+                              "category": "operational",
+                              "description": "Guideline of Strong PW, Training"
+                            }
+                          }
+                        },
+                        "W0001": {
+                          "type": "weakness",
+                          "description": "lazy user",
+                          "sink" : {
+                            "C0001": {
+                              "type": "countermeasure",
+                              "category": "operational",
+                              "description": "Audit (ISMS)"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "A0002": {
+          "type": "attack",
+          "description": "local attack"
+        },
+        "A0003": {
+          "type": "attack",
+          "description": "archive attack"
+        }
+      }
+    }
+  }
+}

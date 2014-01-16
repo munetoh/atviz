@@ -1,0 +1,20 @@
+#GlobalVars:
+#  Enabled: false
+
+LineLength:
+  Max: 120
+
+ClassLength:
+  Max: 1000
+
+MethodLength:
+  Max: 200
+
+CyclomaticComplexity:
+  Max: 20
+
+UselessAssignment:
+  Enabled: false
+
+RedundantReturn:
+  Enabled: false

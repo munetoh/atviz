@@ -1,0 +1,148 @@
+{
+  "title": "OWASP: 2013 Top 10 List",
+  "url": "https://www.owasp.org/index.php/Top_10_2013-Top_10",
+
+  // rankdir=LR
+  "rankdir": "LR",
+  "default_shape": "box",
+
+  // "risk":{}
+  // EPDI table
+  //                   Pink            Red           Orange            Yellow
+  // exploitability                    easy          average           difficult
+  // prevalence        very widespread widespread    average, common   uncommon
+  // detectability                     easy          average           difficult
+  // impact                            severe        moderate
+
+  "risk": {
+    "color table": {
+      "very widespread": "pink",
+      "widespread": "red",
+      "easy"      : "red",
+      "severe"    : "red",
+      "average"   : "orange",
+      "common"    : "orange",
+      "moderate"  : "orange",
+      "uncommon"  : "yellow",
+      "difficult" : "yellow"
+    }
+  },
+
+  "flat_tree": {
+    "OWASP": {
+      "description": "2013 Top 10 List"
+    },
+    "A1": {
+      "child_of": "OWASP",
+      "description": "Injection",
+      // risk
+      "exploitability": "easy",
+      "prevalence":     "common",
+      "detectability":  "average",
+      "impact":         "severe",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A1-Injection"
+    },
+    "A2": {
+      "child_of": "OWASP",
+      "description": "Broken Authentication and Session Management",
+      // risk
+      "exploitability": "average",
+      "prevalence":     "widespread",
+      "detectability":  "average",
+      "impact":         "severe",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A2-Broken_Authentication_and_Session_Management"
+    },
+    "A3": {
+      "child_of": "OWASP",
+      "description": "Cross-Site Scripting (XSS)",
+      // risk
+      "exploitability": "average",
+      "prevalence":     "very widespread",
+      "detectability":  "easy",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_(XSS)"
+    },
+    "A4": {
+      "child_of": "OWASP",
+      "description": "Insecure Direct Object References",
+      // risk
+      "exploitability": "easy",
+      "prevalence":     "common",
+      "detectability":  "easy",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References"
+    },
+    "A5": {
+      "child_of": "OWASP",
+      "description": "Security Misconfiguration",
+      // risk
+      "exploitability": "easy",
+      "prevalence":     "common",
+      "detectability":  "easy",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A5-Security_Misconfiguration"
+    },
+    "A6": {
+      "child_of": "OWASP",
+      "description": "Sensitive Data Exposure",
+      // risk
+      "exploitability": "difficult",
+      "prevalence":     "uncommon",
+      "detectability":  "average",
+      "impact":         "severe",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A6-Sensitive_Data_Exposure"
+
+    },
+    "A7": {
+      "child_of": "OWASP",
+      "description": "Missing Function Level Access Control",
+      // risk
+      "exploitability": "easy",
+      "prevalence":     "common",
+      "detectability":  "average",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A7-Missing_Function_Level_Access_Control"
+    },
+    "A8": {
+      "child_of": "OWASP",
+      "description": "Cross-Site Request Forgery (CSRF)",
+      // risk
+      "exploitability": "average",
+      "prevalence":     "common",
+      "detectability":  "easy",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A8-Cross-Site_Request_Forgery_(CSRF)"
+    },
+    "A9": {
+      "child_of": "OWASP",
+      "description": "Using Components with Known Vulnerabilities",
+      // risk
+      "exploitability": "average",
+      "prevalence":     "widespread",
+      "detectability":  "difficult",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities"
+    },
+    "A10": {
+      "child_of": "OWASP",
+      "description": "Unvalidated Redirects and Forwards",
+      // risk
+      "exploitability": "average",
+      "prevalence":     "uncommon",
+      "detectability":  "easy",
+      "impact":         "moderate",
+      // reference
+      "url": "https://www.owasp.org/index.php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards"
+    }
+
+  } // tree
+}

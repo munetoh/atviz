@@ -1,0 +1,52 @@
+{
+  "title": "Figure 7: PGP, of Bruce Schnier, Attack Tree, Dr. Dobb's Journal, Dec. 1999",
+  "url": "https://www.schneier.com/paper-attacktrees-ddj-ft.html",
+  "default_shape": "box",
+
+
+  "flat_tree": {
+    "G0": {
+      "description": "Goal: Head a message encripted with PGP"
+    },
+
+    "A1": {
+      "child_of": "G0",
+      "description": "Decrypt the message itself"
+    },
+
+    "A2": {
+      "child_of": "G0",
+      "description": "Determine symmetric key used to encrypt the message via other means."
+    },
+
+    "A3": {
+      "child_of": "G0",
+      "description": "Get recipient to (help) decrypt message"
+    },
+
+    "A4": {
+      "child_of": "G0",
+      "description": "Obtain private key of recipient"
+    },
+    "A4-1": {
+      "child_of": "A4",
+      "description": "Factor RSA modulus/calculate ElGamal discrete log."
+    },
+    "A4-2": {
+      "child_of": "A4",
+      "description": "Get private key from recipient's key ring"
+    },
+    "A4-3": {
+      "child_of": "A4",
+      "description": "Monitor recipient's memory"
+    },
+    "A4-4": {
+      "child_of": "A4",
+      "description": "Imprant virus to expose private key"
+    },
+    "A4-5": {
+      "child_of": "A4",
+      "description": "Generate insecure public/private key pair for recipient."
+    }
+  }  // flat_tree
+}

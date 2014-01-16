@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+$:.unshift "#{File.expand_path(File.dirname(__FILE__))}/../lib"
+
+require 'atviz'
+
+# cmd options
+begin
+  # atviz::options
+  json_filename = ARGV[0]
+  pdf_filename =  ARGV[1]
+
+  puts "#{json_filename} #{pdf_filename}"
+
+  $atv = Atviz::Main.new
+  $atv.load_json(json_filename)
+  $atv.update
+  $atv.save_pdf(pdf_filename)
+end

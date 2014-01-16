@@ -1,0 +1,214 @@
+{
+  "title": "Attack tree of Web application (common) by Microsoft ASF",
+  // http://projects.webappsec.org/w/page/13246978/Threat%20Classification
+  // https://www.owasp.org/index.php/Application_Threat_Modeling
+  // http://blogs.msdn.com/b/jmeier/archive/2005/12/18/505182.aspx
+
+  // rankdir=LR
+  "rankdir": "LR",
+  "default_shape": "box",
+
+  "flat_tree": {
+    "T2": {
+      "description": "Application Security Frame"
+    },
+    "T2-1": {
+      "child_of": "T2",
+      "description": "Authentication"
+    },
+    "C2-1-1": {
+      "child_of": "T2-1",
+      "description": "Credentials and authentication tokens are protected with encryption in storage and transit"
+    },
+    "C2-1-2": {
+      "child_of": "T2-1",
+      "description": "Protocols are resistant to brute force, dictionary, and replay attacks"
+    },
+    "C2-1-3": {
+      "child_of": "T2-1",
+      "description": "Strong password policies are enforced"
+    },
+    "C2-1-4": {
+      "child_of": "T2-1",
+      "description": "Trusted server authentication is used instead of SQL authentication"
+    },
+    "C2-1-5": {
+      "child_of": "T2-1",
+      "description": "Passwords are stored with salted hashes"
+    },
+    "C2-1-6": {
+      "child_of": "T2-1",
+      "description": "Password resets do not reveal password hints and valid usernames"
+    },
+    "C2-1-7": {
+      "child_of": "T2-1",
+      "description": "Account lockouts do not result in a denial of service attack"
+    },
+
+    "T2-2": {
+      "child_of": "T2",
+      "description": "Authorization"
+    },
+    "C2-2-1": {
+      "child_of": "T2-2",
+      "description": "Strong ACLs are used for enforcing authorized access to resources"
+    },
+    "C2-2-2": {
+      "child_of": "T2-2",
+      "description": "Role-based access controls are used to restrict access to specific operations"
+    },
+    "C2-2-3": {
+      "child_of": "T2-2",
+      "description": "The system follows the principle of least privilege for user and service accounts"
+    },
+    "C2-2-4": {
+      "child_of": "T2-2",
+      "description": "Privilege separation is correctly configured within the presentation, business and data access layers"
+    },
+
+
+    "T2-3": {
+      "child_of": "T2",
+      "description": "Configuration Management"
+    },
+    "C2-3-1": {
+      "child_of": "T2-3",
+      "description": "Least privileged processes are used and service accounts with no administration capability"
+    },
+    "C2-3-1": {
+      "child_of": "T2-3",
+      "description": "Auditing and logging of all administration activities is enabled"
+    },
+    "C2-3-1": {
+      "child_of": "T2-3",
+      "description": "Access to configuration files and administrator interfaces is restricted to administrators"
+    },
+
+
+    "T2-4": {
+      "child_of": "T2",
+      "description": "Data Protection in Storage and Transit"
+    },
+    "C2-4-1": {
+      "child_of": "T2-4",
+      "description": "Standard encryption algorithms and correct key sizes are being used"
+    },
+    "C2-4-2": {
+      "child_of": "T2-4",
+      "description": "Hashed message authentication codes (HMACs) are used to protect data integrity"
+    },
+    "C2-4-3": {
+      "child_of": "T2-4",
+      "description": "Secrets (e.g. keys, confidential data ) are cryptographically protected both in transport and in storage"
+    },
+    "C2-4-4": {
+      "child_of": "T2-4",
+      "description": "Built-in secure storage is used for protecting keys"
+    },
+    "C2-4-5": {
+      "child_of": "T2-4",
+      "description": "No credentials and sensitive data are sent in clear text over the wire"
+    },
+
+    "T2-5": {
+      "child_of": "T2",
+      "description": "Data Validation / Parameter Validation"
+    },
+    "C2-5-1": {
+      "child_of": "T2-5",
+      "description": "Data type, format, length, and range checks are enforced"
+    },
+    "C2-5-2": {
+      "child_of": "T2-5",
+      "description": "All data sent from the client is validated"
+    },
+    "C2-5-3": {
+      "child_of": "T2-5",
+      "description": "No security decision is based upon parameters (e.g. URL parameters) that can be manipulated"
+    },
+    "C2-5-4": {
+      "child_of": "T2-5",
+      "description": "Input filtering via white list validation is used"
+    },
+    "C2-5-5": {
+      "child_of": "T2-5",
+      "description": "Output encoding is used"
+    },
+
+
+    "T2-6": {
+      "child_of": "T2",
+      "description": "Error Handling and Exception Management"
+    },
+    "C2-6-1": {
+      "child_of": "T2-6",
+      "description": "All exceptions are handled in a structured manner"
+    },
+    "C2-6-2": {
+      "child_of": "T2-6",
+      "description": "Privileges are restored to the appropriate level in case of errors and exceptions"
+    },
+    "C2-6-3": {
+      "child_of": "T2-6",
+      "description": "Error messages are scrubbed so that no sensitive information is revealed to the attacker"
+    },
+
+    "T2-7": {
+      "child_of": "T2",
+      "description": "User and Session Management"
+    },
+    "C2-7-1": {
+      "child_of": "T2-7",
+      "description": "No sensitive information is stored in clear text in the cookie"
+    },
+    "C2-7-2": {
+      "child_of": "T2-7",
+      "description": "The contents of the authentication cookies is encrypted"
+    },
+    "C2-7-3": {
+      "child_of": "T2-7",
+      "description": "Cookies are configured to expire"
+    },
+    "C2-7-4": {
+      "child_of": "T2-7",
+      "description": "Sessions are resistant to replay attacks"
+    },
+    "C2-7-5": {
+      "child_of": "T2-7",
+      "description": "Secure communication channels are used to protect authentication cookies"
+    },
+    "C2-7-6": {
+      "child_of": "T2-7",
+      "description": "User is forced to re-authenticate when performing critical functions"
+    },
+    "C2-7-7": {
+      "child_of": "T2-7",
+      "description": "Sessions are expired at logout"
+    },
+
+    "T2-8": {
+      "child_of": "T2",
+      "description": "Auditing and Logging"
+    },
+    "C2-8-1": {
+      "child_of": "T2-8",
+      "description": "Sensitive information (e.g. passwords, PII) is not logged"
+    },
+    "C2-8-2": {
+      "child_of": "T2-8",
+      "description": "Access controls (e.g. ACLs) are enforced on log files to prevent un-authorized access"
+    },
+    "C2-8-3": {
+      "child_of": "T2-8",
+      "description": "Integrity controls (e.g. signatures) are enforced on log files to provide non-repudiation"
+    },
+    "C2-8-4": {
+      "child_of": "T2-8",
+      "description": "Log files provide for audit trail for sensitive operations and logging of key events"
+    },
+    "C2-8-5": {
+      "child_of": "T2-8",
+      "description": "Auditing and logging is enabled across the tiers on multiple servers"
+    }
+  } // tree
+}

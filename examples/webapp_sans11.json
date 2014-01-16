@@ -1,0 +1,123 @@
+{
+  "title": "CWE/SANS TOP 25 Most Dangerous Software Errors",
+  // http://www.sans.org/top25-software-errors/
+
+
+  // rankdir=LR
+  "rankdir": "LR",
+  "default_shape": "box",
+
+  "flat_tree": {
+    "SANS11": {
+      "description": "CWE/SANS TOP 25 \nMost Dangerous Software Errors"
+    },
+
+    // Insecure Interaction Between Components
+    "CWE-89": {
+      "child_of": "SANS11",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+    },
+    "CWE-78": {
+      "child_of": "SANS11",
+      "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    },
+    "CWE-79": {
+      "child_of": "SANS11",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    },
+    "CWE-434": {
+      "child_of": "SANS11",
+      "description": "Unrestricted Upload of File with Dangerous Type"
+    },
+    "CWE-352": {
+      "child_of": "SANS11",
+      "description": "Cross-Site Request Forgery (CSRF)"
+    },
+    "CWE-601": {
+      "child_of": "SANS11",
+      "description": "URL Redirection to Untrusted Site ('Open Redirect')"
+    },
+
+    // Risky Resource Management
+    "CWE-120": {
+      "child_of": "SANS11",
+      "description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+    },
+    "CWE-22": {
+      "child_of": "SANS11",
+      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    },
+    "CWE-494": {
+      "child_of": "SANS11",
+      "description": "Download of Code Without Integrity Check"
+    },
+    "CWE-892": {
+      "child_of": "SANS11",
+      "description": "Inclusion of Functionality from Untrusted Control Sphere"
+    },
+    "CWE-676": {
+      "child_of": "SANS11",
+      "description": "Use of Potentially Dangerous Function"
+    },
+    "CWE-131": {
+      "child_of": "SANS11",
+      "description": "Incorrect Calculation of Buffer Size"
+    },
+    "CWE-134": {
+      "child_of": "SANS11",
+      "description": "Uncontrolled Format String"
+    },
+    "CWE-190": {
+      "child_of": "SANS11",
+      "description": "Integer Overflow or Wraparound"
+    },
+    
+
+    // Porous Defenses
+    "CWE-306": {
+      "child_of": "SANS11",
+      "description": "Missing Authentication for Critical Function"
+    },
+    "CWE-862": {
+      "child_of": "SANS11",
+      "description": "Missing Authorization"
+    },
+    "CWE-798": {
+      "child_of": "SANS11",
+      "description": "Use of Hard-coded Credentials"
+    },
+    "CWE-311": {
+      "child_of": "SANS11",
+      "description": "Missing Encryption of Sensitive Data"
+    },
+    "CWE-807": {
+      "child_of": "SANS11",
+      "description": "Reliance on Untrusted Inputs in a Security Decision"
+    },
+    "CWE-250": {
+      "child_of": "SANS11",
+      "description": "Execution with Unnecessary Privileges"
+    },
+    "CWE-863": {
+      "child_of": "SANS11",
+      "description": "Incorrect Authorization"
+    },
+    "CWE-732": {
+      "child_of": "SANS11",
+      "description": "Incorrect Permission Assignment for Critical Resource"
+    },
+    "CWE-327": {
+      "child_of": "SANS11",
+      "description": "Use of a Broken or Risky Cryptographic Algorithm"
+    },
+    "CWE-307": {
+      "child_of": "SANS11",
+      "description": "Improper Restriction of Excessive Authentication Attempts"
+    },
+    "CWE-759": {
+      "child_of": "SANS11",
+      "description": "Use of a One-Way Hash without a Salt"
+    }
+
+  } // tree
+}

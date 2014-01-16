@@ -1,0 +1,59 @@
+{
+  // Rails
+  // http://guides.rubyonrails.org/security.html
+  // http://en.wikipedia.org/wiki/Mass_assignment_vulnerability
+  "include": "webapp_asf.json",
+  "rankdir": "LR",
+  "default_shape": "box",
+
+  "flat_tree": {
+    // Session
+    "C2-7-5-1": {
+      "child_of": "C2-7-5",
+      "description": "Rails: config.force_ssl = true (After v3.1)"
+    },
+
+    "C2-7-7-1": {
+      "child_of": "C2-7-7",
+      "description": "Rails: Call reset_session"
+    },
+    "C2-7-7-2": {
+      "child_of": "C2-7-7",
+      "description": "Rails: Set the expiry time-stamp of the cookie with the session id"
+    },
+
+    "C2-7-8": {
+      "child_of": "T2-7",
+      "description": "Unpredictable session id (brute-force attack)"
+    },
+    "C2-7-8-1": {
+      "child_of": "C2-7-8",
+      "description": "Rails: The session id is a 32 byte long MD5 hash value."
+    },
+
+    // 3 CSRF
+    "C2-5-4-1": {
+      "child_of": "C2-5-4",
+      "description": "Rails: for CSRF, call protect_from_forgery"
+    },
+    // 4 Redirection and Files
+    // 5 Intranet and Admin Security
+    // 6 User Management
+    // 7 Injection
+    // XSS
+    "C2-5-5-1": {
+      "child_of": "C2-5-5",
+      "description": "Rails: Use escape (before v3.2)"
+    },
+    "C2-5-5-2": {
+      "child_of": "C2-5-5",
+      "description": "Rails: Default escape (After v3.2)"
+    }
+    // 8 Default Headers
+    // 9 Environmental Security
+    // 10 Additional Resources
+    // Mass Assignment
+
+
+  }
+}

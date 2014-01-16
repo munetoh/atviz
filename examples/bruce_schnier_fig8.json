@@ -1,0 +1,186 @@
+{
+  "title": "Figure 8: Attack Tree Against a General Computer System, of Bruce Schnier, Attack Tree, Dr. Dobb's Journal, Dec. 1999",
+  "url": "https://www.schneier.com/paper-attacktrees-ddj-ft.html",
+  "default_shape": "box",
+
+
+  "flat_tree": {
+    "G0": {
+      "description": "Goal: Read a specific message that has been sent from one Windows 95 computer to another"
+    },
+
+    "A1": {
+      "child_of": "G0",
+      "description": "Convince sender to reveal message"
+    },
+    "A1-1": {
+      "child_of": "A1",
+      "description": "Bribe user."
+    },
+    "A1-2": {
+      "child_of": "A1",
+      "description": "Blackmail user."
+    },
+    "A1-3": {
+      "child_of": "A1",
+      "description": "Threaten user."
+    },
+    "A1-4": {
+      "child_of": "A1",
+      "description": "Fool user."
+    },
+
+    "A2": {
+      "child_of": "G0",
+      "description": "Read message when it is \nbeing entered into the computer."
+    },
+    "A2-1": {
+      "child_of": "A2",
+      "description": "Monitor electromagnetic \nfrom computer screen."
+    },
+    "C2-1": {
+      "child_of": "A2-1",
+      "description": "Countermeasure: use a \nTEMPEST computer."
+    },
+    "A2-2": {
+      "child_of": "A2",
+      "description": "Visually monitor \ncomputer screen."
+    },
+
+    "A3": {
+      "child_of": "G0",
+      "description": "Read message when it is \nbeing stored on sender's disk."
+    },
+    "C3": {
+      "child_of": "A3",
+      "description": "Countermeasure: use SFS \nto encrypt hard drive."
+    },
+    "A3-1": {
+      "child_of": "C3",
+      "condition": "and",
+      "description": "Get access to hard drive."
+    },
+    "C3-1": {
+      "child_of": "A3-1",
+      "description": "Countermeasure: put physical locks \non all doors and windows."
+    },
+    "A3-2": {
+      "child_of": "C3",
+      "condition": "and",
+      "description": "Read file protected with SFS."
+    },
+
+
+
+    "A4": {
+      "child_of": "G0",
+      "description": "Read message when it is \nbeing sent from cender to recipient."
+    },
+    "C4": {
+      "child_of": "A4",
+      "description": "Countermeasure: use PGP."
+    },
+    "A4-1": {
+      "child_of": "C4",
+      "description": "Intercept message in transit."
+    },
+    "C4-1": {
+      "child_of": "A4-1",
+      "description": "Countermeasure: use transport-layer \nencryption program."
+    },
+    "A4-2": {
+      "child_of": "C4",
+      "description": "Read message encrypted with PGP."
+    },
+
+    "A5": {
+      "child_of": "G0",
+      "description": "Convice recipient to reveal message."
+    },
+    "A5-1": {
+      "child_of": "A5",
+      "description": "Bribe user."
+    },
+    "A5-2": {
+      "child_of": "A5",
+      "description": "Blackmail user."
+    },
+    "A5-3": {
+      "child_of": "A5",
+      "description": "Threaten user."
+    },
+    "A5-4": {
+      "child_of": "A5",
+      "description": "Fool user."
+    },
+
+    "A6": {
+      "child_of": "G0",
+      "description": "Read message when it is being read"
+    },
+    "A6-1": {
+      "child_of": "A6",
+      "description": "Monitor electromagnetic \nfrom computer screen."
+    },
+    "C6-1": {
+      "child_of": "A6-1",
+      "description": "Countermeasure: use a \nTEMPEST computer."
+    },
+    "A6-2": {
+      "child_of": "A6",
+      "description": "Visually monitor computer screen."
+    },
+
+    "A7": {
+      "child_of": "G0",
+      "description": "Read message when it is \nbeing stored on receiver's disk."
+    },
+    "A7-1": {
+      "child_of": "A7",
+      "description": "Get stored message from \nuser's hard drive after decryption."
+    },
+    "C7-1": {
+      "child_of": "A7-1",
+      "description": "Countermeasure: use SFS \nto encrypt hard drive."
+    },
+    "A7-1-1": {
+      "child_of": "C7-1",
+      "condition": "and",
+      "description": "Get access to hard drive."
+    },
+    "C7-1-1": {
+      "child_of": "A7-1-1",
+      "description": "Countermeasure: put physical \nlocks on all doors and windows."
+    },
+    "A7-1-2": {
+      "child_of": "C7-1",
+      "condition": "and",
+      "description": "Read file protected with SFS."
+    },
+
+
+    "A7-2": {
+      "child_of": "A7",
+      "description": "Get stored message from \nbackup tapes after decryption."
+    },
+
+    "A8": {
+      "child_of": "G0",
+      "description": "Get paper printout of message."
+    },
+    "C8": {
+      "child_of": "A8",
+      "description": "Countermeasure: store \npaper copies in safe"
+    },
+    "A8-1": {
+      "child_of": "C8",
+      "condition": "and",
+      "description": "Get physical access to safe."
+    },
+    "A8-2": {
+      "child_of": "C8",
+      "condition": "and",
+      "description": "Open the safe."
+    }
+  }  // flat_tree
+}

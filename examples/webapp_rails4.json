@@ -1,0 +1,67 @@
+{
+  "title": "Attack tree of Web application using Rails4",
+  // http://projects.webappsec.org/w/page/13246978/Threat%20Classification
+  // https://www.owasp.org/index.php/Application_Threat_Modeling
+  // 
+  "flat_tree": {
+    // 
+    "T1": {
+      "description": "Common Web application weakness"
+    },
+
+    "T2": {
+      "description": "ASF"
+    },
+
+    "T3": {
+      "description": "Microsoft STRIDE"
+    },
+    "T3-1": {
+      "child_of": "T3",
+      "description": "Spoofing Identity"
+    },
+    "C3-1-1": {
+      "child_of": "T3-1",
+      "condition": "and",
+      "description": "Appropriate authentication"
+    },
+    "C3-1-2": {
+      "child_of": "T3-1",
+      "condition": "and",
+      "description": "Protect secret data"
+    },
+    "C3-1-3": {
+      "child_of": "T3-1",
+      "condition": "and",
+      "description": "Don't store secrets"
+    },
+
+
+    "T3-2": {
+      "child_of": "T3",
+      "description": "Tampering with data"
+    },
+    "T3-3": {
+      "child_of": "T3",
+      "description": "Repudiation"
+    },
+    "T3-4": {
+      "child_of": "T3",
+      "description": "Information Disclosure"
+    },
+    "T3-5": {
+      "child_of": "T3",
+      "description": "Denial of Service"
+    },
+
+    "T3-6": {
+      "child_of": "T3",
+      "description": "Elevation of privilege"
+    },
+    "C3-6": {
+      "child_of": "T3-6",
+      "description": "Run with least privilege"
+    },
+
+  }
+}
